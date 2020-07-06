@@ -150,7 +150,7 @@ class Info extends BaseObject
             'contact' => $this->contact,
             'license' => $this->license,
             'version' => $this->version,
-            'x-logo' => json_encode( $this->xLogo, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES )
+            'x-logo' => $this->xLogo
         ]);
     }
 }
