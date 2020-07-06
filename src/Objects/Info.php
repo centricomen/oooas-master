@@ -47,6 +47,11 @@ class Info extends BaseObject
     protected $version;
 
     /**
+     * @var array|null
+     */
+    protected $xlogo;
+
+    /**
      * @param string|null $title
      * @return static
      */
@@ -124,6 +129,15 @@ class Info extends BaseObject
         return $instance;
     }
 
+    public function xLogo(?array $xlogo): self 
+    {
+        $instance = clone $this;
+
+        $instance->xLogo = $xlogo;
+
+        return $instance;
+    }
+
     /**
      * @return array
      */
@@ -136,6 +150,7 @@ class Info extends BaseObject
             'contact' => $this->contact,
             'license' => $this->license,
             'version' => $this->version,
+            'x-logo' => json_encode( $this->xLogo, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES )
         ]);
     }
 }
