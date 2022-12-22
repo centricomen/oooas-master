@@ -212,7 +212,6 @@ class OpenApi extends BaseObject
         }
 
         return Arr::filter([
-            //'openapi' => $this->openapi,
             'swagger' => $this->openapi,
             'info' => $this->info,
             'servers' => $this->servers,

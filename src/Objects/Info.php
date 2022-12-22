@@ -51,6 +51,16 @@ class Info extends BaseObject
      */
     protected $xlogo;
 
+    public function xLogo(?array $xlogo): self
+    {
+        $instance = clone $this;
+
+        $instance->xLogo = $xlogo;
+        $instance->xlogo = $xlogo;
+
+        return $instance;
+    }
+
     /**
      * @param string|null $title
      * @return static
@@ -125,15 +135,6 @@ class Info extends BaseObject
         $instance = clone $this;
 
         $instance->version = $version;
-
-        return $instance;
-    }
-
-    public function xLogo(?array $xlogo): self 
-    {
-        $instance = clone $this;
-
-        $instance->xLogo = $xlogo;
 
         return $instance;
     }
