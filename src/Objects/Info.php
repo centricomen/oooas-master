@@ -13,6 +13,7 @@ use GoldSpecDigital\ObjectOrientedOAS\Utilities\Arr;
  * @property \GoldSpecDigital\ObjectOrientedOAS\Objects\Contact|null $contact
  * @property \GoldSpecDigital\ObjectOrientedOAS\Objects\License|null $license
  * @property string|null $version
+ * @property array|null $xLogo
  */
 class Info extends BaseObject
 {
@@ -50,8 +51,9 @@ class Info extends BaseObject
      * @var array|null
      */
     protected $xlogo;
+    protected $xLogo;
 
-    public function xLogo(?array $xlogo): self
+    public function xlogo(?array $xlogo): self
     {
         $instance = clone $this;
 
